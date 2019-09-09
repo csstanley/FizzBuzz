@@ -1,15 +1,17 @@
 for (var i = 1; i <= 100; i++) {
 
-        // The  % returns the remainder, so if the remainder is 0, it's divisible by 3 //
-    if (i % 3 == 0) {
-        console.log("Fizz");
+    // Creating an variable to represent an empty string //
+var answer = "";
 
-    } else if (i % 5 == 0) {
-        console.log("Buzz");
+// The % assignment operator returns the remainder. If it returns 0, it's divisible by either 3, 5, or both. //
+// It will return either "Fizz", "Buzz", or "FizzBuzz" by adding the empty string to the string on the right. // 
+if (i % 3 == 0) { answer += "Fizz"; }
+if (i % 5 == 0) { answer += "Buzz"; }
 
-        // If it's neither divisible by 3 or 5, return the number //
-    } else if ((i % 3 != 0) && (i % 5 != 0)) {
-        console.log(i);
-    }
+// The line of code below tests whether either of the first two conditions were true, then assigns i to the answer if it's determined that they weren't. //  
+if (answer == "") { answer = i; }
 
-}
+// This console.logs all answers. //
+console.log(answer);
+
+};
